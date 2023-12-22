@@ -1,3 +1,4 @@
+import 'package:elif_shop/features/auth/view/pages/search_page.dart';
 import 'package:flutter/material.dart';
 
 import 'features/auth/view/pages/login_page.dart';
@@ -10,7 +11,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LogInPage(),
+      debugShowCheckedModeBanner: false,
+      home: SearchPage(),
     );
   }
 }

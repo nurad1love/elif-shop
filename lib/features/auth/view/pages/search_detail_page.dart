@@ -1,3 +1,4 @@
+import 'package:elif_shop/features/auth/view/widgets/discount_label.dart';
 import 'package:flutter/material.dart';
 
 class SearchDetailPage extends StatefulWidget {
@@ -162,12 +163,15 @@ class _SearchDetailPageState extends State<SearchDetailPage> {
                           Stack(
                             alignment: Alignment.topRight,
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(8),
-                                child: Image.asset(
-                                  items[index]['image'],
-                                  width: double.infinity,
-                                  fit: BoxFit.cover,
+                              Padding(
+                                padding: const EdgeInsets.all(22.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.asset(
+                                    items[index]['image'],
+                                    width: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               IconButton(
@@ -180,22 +184,7 @@ class _SearchDetailPageState extends State<SearchDetailPage> {
                               Positioned(
                                 top: 10,
                                 left: 0,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                  decoration: const BoxDecoration(
-                                    color: Color(0xffFFAB5D),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(8),
-                                      bottomRight: Radius.circular(8),
-                                    ),
-                                  ),
-                                  child: const Text(
-                                    '-44%',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
+                                child: DiscountLabel(discountPercentage: '      -44%      ',)
                               ),
                             ],
                           ),
